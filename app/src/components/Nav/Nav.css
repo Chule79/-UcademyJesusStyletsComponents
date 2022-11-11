@@ -1,0 +1,40 @@
+.navLateral{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    align-items: center;
+    padding: 2rem 0rem;
+    justify-content: space-between;
+    height: 89vh;
+    font-family: Poppins;
+}
+
+
+
+.selectBtn{
+    border: 1px solid #DBDBDB;
+}
+.navFuncional{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    align-items: center;
+   
+}
+
+.subNavi{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none;
+}
+.miniNav{
+    width: 160px;
+    display: flex;
+    justify-content: end;
+}

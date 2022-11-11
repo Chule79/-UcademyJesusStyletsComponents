@@ -1,0 +1,57 @@
+
+
+.greenBtn img{
+    width: 20px;
+}
+
+.tablon{
+    width: 70vw;
+    padding: 2rem 0rem;
+    height: 89vh;
+    font-family: Poppins;
+    align-content: flex-start;
+}
+
+.datos{
+    font-family: 'Montserrat';
+    width: 260px;
+    overflow: scroll;
+    text-align: center;  
+    padding: 20px 0rem 1rem 1rem;
+    color: black;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.titulosTabla{
+    font-family: 'Poppins';
+    width: 100%;
+    border-bottom: 3px solid black;
+    display: flex;
+}
+
+
+table{
+    width: 100%;
+}
+
+.rowLine{
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;   
+}
+
+.datos button{
+    width: 60px;
+    height: 24px;
+
+}
+ button img{
+    width: 20px;
+}
+
+.informacion{
+    border: 0;
+    background-color: transparent;
+}
