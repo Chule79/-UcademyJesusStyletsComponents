@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { getData } from '../../api/api';
+import { StyleTd, StyleTr } from '../../styles/TableStyle';
 import { PopCreate } from '../PopUpAlumno/Popup/Popup';
 
 const RowT = () => {
@@ -16,18 +17,18 @@ const RowT = () => {
     <>
       {usuario.length ? (
         usuario.map((item) => (
-          <tr className="rowLine" key={item.id}>
-            <td className="datos">
+          <StyleTr trDatos key={item.id}>
+            <StyleTd tdTable>
               <button>{item.state}</button>
-            </td>
-            <td className="datos">{item.surname}</td>
-            <td className="datos">{item.name}</td>
-            <td className="datos">{item.email}</td>
-            <td className="datos">{item.movil}</td>
-            <td className="datos">
+            </StyleTd>
+            <StyleTd tdTable>{item.surname}</StyleTd>
+            <StyleTd tdTable>{item.name}</StyleTd>
+            <StyleTd tdTable>{item.email}</StyleTd>
+            <StyleTd tdTable>{item.movil}</StyleTd>
+            <StyleTd tdTable>
               <PopCreate item={item} />
-            </td>
-          </tr>
+            </StyleTd>
+          </StyleTr>
         ))
       ) : (
         <p>Loading ...</p>

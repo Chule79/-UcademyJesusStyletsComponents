@@ -52,4 +52,12 @@ ${({ navASubS }) => {
       `;
     }
   }}
+  ${({ asteriscoA }) => {
+    if (asteriscoA) {
+      return css`
+        text-decoration: none;
+        color: red;
+      `;
+    }
+  }}
 `;

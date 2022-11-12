@@ -1,33 +1,40 @@
-import './Header.css';
+
 
 import React from 'react';
+
+import { StylesDiv } from '../../styles/DivStyles';
+import { StylesInput } from '../../styles/FormStyles';
+import { StyledImg } from '../../styles/ImgStylez';
+import { StyledA } from '../../styles/FontsStyles';
 const HeaderCustom = () => {
   return (
-    <div className="header">
-      <div className="iconYBuscador">
-        <img src="../../src/assets/logo-blanco.png" />
-        <div className="buscador">
-          <label htmlFor="buscador" className="lupa">
-            🔍︎ 
-          </label>
-          <input
+    <StylesDiv headerDiv>
+      <StylesDiv buscadorDiv>
+        <StyledImg logoImg src="../../src/assets/logo-blanco.png" />
+        <StylesDiv lupaDiv>
+          <label htmlFor="buscador">🔍︎</label>
+          <StylesInput
             type="text"
             value="Buscar"
             name="buscador"
-            className="buscadorIn"
-          ></input>
-        </div>
-      </div>
-      <div className="userIcons">
-        <div className="info">
+            buscadorInp
+          ></StylesInput>
+        </StylesDiv>
+      </StylesDiv>
+      <StylesDiv notifiDiv>
+        <StylesDiv infoDiv>
           <div>🖂</div>
-          <div>🕭<a className="asterisco">*</a></div>
-        </div>
-        <div className="user">
-          <div className="circleUser"><img src='../../src/assets/user.png'></img></div>
-        </div>
-      </div>
-    </div>
+          <div>
+            🕭<StyledA asteriscoA>*</StyledA>
+          </div>
+        </StylesDiv>
+        <StylesDiv caseUsrDiv>
+          <StylesDiv circleUsrDiv>
+            <StyledImg userImg src="../../src/assets/user.png"></StyledImg>
+          </StylesDiv>
+        </StylesDiv>
+      </StylesDiv>
+    </StylesDiv>
   );
 };
 

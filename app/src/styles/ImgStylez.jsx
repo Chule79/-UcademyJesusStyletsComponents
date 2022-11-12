@@ -17,11 +17,26 @@ export const StyledImg = styled.img`
     }
   }}
 
-  ${({ btnImg }) =>{
+  ${({ btnImg }) => {
     if (btnImg) {
       return css`
-      width: 20px;
-      `
+        width: 20px;
+      `;
+    }
+  }}
+
+${({ userImg }) => {
+    if (userImg) {
+      return css`
+        width: 30px;
+      `;
+    }
+  }}
+  ${({ logoImg }) => {
+    if (logoImg) {
+      return css`
+        height: 45px;
+      `;
     }
   }}
 `;
