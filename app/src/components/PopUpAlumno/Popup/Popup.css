@@ -43,16 +43,6 @@
     gap: 1rem;
   }
 
-  .noselect{
-    background-color: #ffffff;
-    border: 0;}
-
-  .selected{
-    background-color: #ffffff;
-    border: 0;
-    border-bottom: #0ABB87 4px solid;
-    font-family: MontserratBold;
-  }
 
   .divClose{
     display: flex;

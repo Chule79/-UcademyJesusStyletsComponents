@@ -35,7 +35,7 @@ export const StyledA = styled.a`
     }
   }}
 
-${({ navASub }) => {
+  ${({ navASub }) => {
     if (navASub) {
       return css`
         color: black;
@@ -48,7 +48,7 @@ ${({ navASub }) => {
 ${({ navASubS }) => {
     if (navASubS) {
       return css`
-         color:#0ABB87
+        color: #0abb87;
       `;
     }
   }}

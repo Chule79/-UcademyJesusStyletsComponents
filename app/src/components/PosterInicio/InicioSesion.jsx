@@ -3,10 +3,11 @@ import './InicioSesion.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { StyledButton } from '../../styles/ButtonsStyles';
+import { StyledImg } from '../../styles/ImgStylez';
 function InicioPoster() {
   return (
     <div className="panelInicio">
-      <img src="../../src/assets/logo.png" />
+      <StyledImg inicImg src="../../src/assets/logo.png" />
       <form className="formInicio">
         <div className="divName">
           <label htmlFor="name">
@@ -29,7 +30,7 @@ function InicioPoster() {
           <div>
             <a className="olvide">Olvidè Contraseña</a>
           </div>
-        </div>
+        </div> 
         <NavLink to={'estudiantes'}>
           <StyledButton type='submit' blackBtn>Iniciar Sesión</StyledButton>
         </NavLink>

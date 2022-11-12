@@ -2,23 +2,24 @@ import './Tabla.css';
 
 import React from 'react';
 
-import RowT from './RowT';
+import { StyleTable, StyleTr } from '../../styles/TableStyle';
 import { PopRegister } from '../PopUpRegistro/PopupR';
+import RowT from './RowT';
 
 function Tabla() {
   return (
     <div className="tablon">
-      <PopRegister/>
-      <table>
-        <tr className="titulosTabla">
+      <PopRegister />
+      <StyleTable tableG>
+        <StyleTr trTitl>
           <th className="datos">Conexión</th>
           <th className="datos">Nombre y apellidos</th>
           <th className="datos">Nombre de usuario</th>
           <th className="datos">Email</th>
           <th className="datos">Móvil</th>
-        </tr>
+        </StyleTr>
         <RowT />
-      </table>
+      </StyleTable>
     </div>
   );
 }

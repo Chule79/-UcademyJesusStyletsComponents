@@ -4,7 +4,9 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import { v4 as uuidv4 } from 'uuid';
+
 import { StyledButton } from '../../styles/ButtonsStyles';
+import { StyledImg } from '../../styles/ImgStylez';
 export const PopRegister = () => {
   const [name, setName] = useState('');
   const [state, setState] = useState('');
@@ -41,8 +43,11 @@ export const PopRegister = () => {
     <Popup
       trigger={
         <StyledButton greenBtn>
-          <img src="https://www.svgrepo.com/show/391514/plus-circle-o.svg"></img> Nuevo
-          estudiante
+          <StyledImg
+            buttonImg
+            src="https://www.svgrepo.com/show/391514/plus-circle-o.svg"
+          ></StyledImg>
+          Nuevo estudiante
         </StyledButton>
       }
       modal
@@ -105,7 +110,10 @@ export const PopRegister = () => {
                   />
                 </div>
               </div>
-              <StyledButton blackBtn type="submit"> Guardar</StyledButton>
+              <StyledButton blackBtn type="submit">
+                {' '}
+                Guardar
+              </StyledButton>
             </form>
             <div className="divClose">
               <StyledButton closeBtn onClick={close}>

@@ -1,11 +1,7 @@
 
 
-.greenBtn img{
-    width: 20px;
-}
-
 .tablon{
-    width: 70vw;
+    width: 81%;
     padding: 2rem 0rem;
     height: 89vh;
     font-family: Poppins;
@@ -24,17 +20,9 @@
 ::-webkit-scrollbar {
     display: none;
 }
-.titulosTabla{
-    font-family: 'Poppins';
-    width: 100%;
-    border-bottom: 3px solid black;
-    display: flex;
-}
 
 
-table{
-    width: 100%;
-}
+
 
 .rowLine{
     width: 100%;
@@ -42,14 +30,7 @@ table{
     display: flex;   
 }
 
-.datos button{
-    width: 60px;
-    height: 24px;
-
-}
- button img{
-    width: 20px;
-}
+ 
 
 .informacion{
     border: 0;

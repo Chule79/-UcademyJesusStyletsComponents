@@ -5,14 +5,15 @@ import Popup from 'reactjs-popup';
 
 import DatosPop from '../BodyPop/DatosPop';
 import { StyledButton } from '../../../styles/ButtonsStyles';
+import { StyledImg } from '../../../styles/ImgStylez';
 
 export const PopCreate = ({ item }) => {
   return (
     <Popup
       trigger={
-        <button className="informacion" key={item.id}>
-          <img src="https://www.svgrepo.com/show/137539/information.svg"></img>
-        </button>
+        <StyledButton tablaBtn key={item.id}>
+          <StyledImg btnImg src="https://www.svgrepo.com/show/137539/information.svg"></StyledImg>
+        </StyledButton>
       }
       modal
     >

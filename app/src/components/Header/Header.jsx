@@ -8,7 +8,7 @@ const HeaderCustom = () => {
         <img src="../../src/assets/logo-blanco.png" />
         <div className="buscador">
           <label htmlFor="buscador" className="lupa">
-            🔍︎
+            🔍︎ 
           </label>
           <input
             type="text"

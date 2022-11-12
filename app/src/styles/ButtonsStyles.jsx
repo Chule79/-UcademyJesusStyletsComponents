@@ -15,6 +15,8 @@ export const StyledButton = styled.button`
         height: 50px;
         border: 1px solid #0abb87;
         color: aliceblue;
+        display: flex;
+        gap: 1rem;
       `;
     }
   }}
@@ -77,6 +79,17 @@ export const StyledButton = styled.button`
         justify-content: start;
         padding-left: 1rem;
         color: black;
+      `;
+    }
+  }}
+
+${({ tablaBtn }) => {
+    if (tablaBtn) {
+      return css`
+        border: 0;
+        background-color: transparent;
+        width: 60px;
+        height: 24px;
       `;
     }
   }}
