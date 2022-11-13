@@ -49,6 +49,19 @@ export const StylesForm = styled.form`
       `;
     }
   }}
+
+${({ editForm }) => {
+    if (editForm) {
+      return css`
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+      `;
+    }
+  }}
 `;
 
 export const StylesSelect = styled.select`

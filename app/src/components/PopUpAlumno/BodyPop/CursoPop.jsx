@@ -1,6 +1,8 @@
 import axios, { Axios } from 'axios';
 import React, { useEffect, useState } from 'react';
 
+import { StylesDiv } from '../../../styles/DivStyles.jsx';
+import { StyledH2 } from '../../../styles/FontsStyles.jsx';
 const CursoPop = () => {
   const [curso, setCurso] = useState([]);
   useEffect(() => {
@@ -14,15 +16,15 @@ const CursoPop = () => {
     <>
       {curso.length ? (
         curso.map((item) => (
-          <div key={item.id} className="totalCursos">
-            <h3 className="nCurso">{item.name}</h3>
-            <div className="barra">
-              <progress id="file" max="100" value={item.value}/>
+          <StylesDiv cursosDiv key={item.id}>
+            <StyledH2 navH2S>{item.name}</StyledH2>
+            <StylesDiv barraDiv>
+              <progress id="file" max="100" value={item.value} />
               <p>{item.value}%</p>
-            </div>
+            </StylesDiv>
 
             <p>Fecha de inscripción: {item.date}</p>
-          </div>
+          </StylesDiv>
         ))
       ) : (
         <p>Loading ...</p>

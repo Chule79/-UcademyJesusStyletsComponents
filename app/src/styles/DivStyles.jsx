@@ -266,4 +266,78 @@ ${({ circleImgDiv }) => {
       `;
     }
   }}
+
+${({ todoDatoDiv }) => {
+    if (todoDatoDiv) {
+      return css`
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+      `;
+    }
+  }}
+
+${({ namesDiv }) => {
+    if (namesDiv) {
+      return css`
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 352px;
+        border-bottom: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      `;
+    }
+  }}
+
+${({ nameDiv }) => {
+    if (nameDiv) {
+      return css`
+        border-bottom: 1px solid black;
+        width: 320px;
+        display: flex;
+        gap: 0.2rem;
+        flex-direction: column;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      `;
+    }
+  }}
+
+${({ fechaDiv }) => {
+    if (fechaDiv) {
+      return css`
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 352px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      `;
+    }
+  }}
+
+${({ cursosDiv }) => {
+    if (cursosDiv) {
+      return css`
+        width: 400px;
+      `;
+    }
+  }}
+
+${({ barraDiv }) => {
+    if (barraDiv) {
+      return css`
+        display: flex;
+        flex-direction: row;
+        font-family: MontserratBold;
+        width: 100%;
+      `;
+    }
+  }}
 `;
+
+
+
+

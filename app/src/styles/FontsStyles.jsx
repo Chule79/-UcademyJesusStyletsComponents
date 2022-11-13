@@ -70,3 +70,23 @@ ${({ olviA }) => {
     }
   }}
 `;
+
+export const StyledP = styled.p`
+  ${({ titlP }) => {
+    if (titlP) {
+      return css`
+        font-family: MontserratBold;
+        font-size: 11px;
+      `;
+    }
+  }}
+  ${({ normalP }) => {
+    if (normalP) {
+      return css`
+        padding-top: 3px;
+        font-size: 14px;
+        font-family: Montserrat;
+      `;
+    }
+  }}
+`;

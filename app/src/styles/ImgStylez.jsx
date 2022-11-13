@@ -39,4 +39,11 @@ ${({ userImg }) => {
       `;
     }
   }}
+  ${({ mountainImg }) => {
+    if (mountainImg) {
+      return css`
+        width: 51px; 
+      `;
+    }
+  }}
 `;

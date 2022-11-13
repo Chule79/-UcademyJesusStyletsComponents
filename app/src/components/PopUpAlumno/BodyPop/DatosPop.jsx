@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 
 import { StyledButton } from '../../../styles/ButtonsStyles';
 import { StylesDiv } from '../../../styles/DivStyles';
+import { StyledP } from '../../../styles/FontsStyles';
 import { StylesForm, StylesInput } from '../../../styles/FormStyles';
+import { StyledImg } from '../../../styles/ImgStylez';
 import CursoPop from './CursoPop';
 
 const DatosPop = ({ item }) => {
@@ -39,7 +41,7 @@ const DatosPop = ({ item }) => {
     return (
       <>
         <StylesDiv headerPopDiv>
-        <StylesDiv cursoHeadPopDiv>
+          <StylesDiv cursoHeadPopDiv>
             <StyledButton popNavBtnS>Perfil</StyledButton>
             <StyledButton popNavBtnN onClick={(ev) => setVariant('curso')}>
               Cursos
@@ -51,47 +53,47 @@ const DatosPop = ({ item }) => {
         </StylesDiv>
         <StylesDiv cuerpoPopDiv>
           <StylesDiv circleImgDiv>
-            <img
+            <StyledImg
+              mountainImg
               src="https://www.svgrepo.com/show/71408/image.svg"
-              className="mountainImg"
-            ></img>
+            ></StyledImg>
           </StylesDiv>
-          <div className="todoDatos">
-            <div className="nombres">
-              <img src="https://www.svgrepo.com/show/20/user.svg"></img>
-              <div className="textNombres">
-                <div className="cajaNom">
-                  <p className="tituloDato">Nombre y apellidos</p>
-                  <p className="datoApi">{item.surname}</p>
-                </div>
+          <StylesDiv todoDatoDiv>
+            <StylesDiv namesDiv>
+              <StyledImg btnImg src="https://www.svgrepo.com/show/20/user.svg"></StyledImg>
+              <div>
+                <StylesDiv nameDiv>
+                  <StyledP titlP>Nombre y apellidos</StyledP>
+                  <StyledP normalP>{item.surname}</StyledP>
+                </StylesDiv>
                 <div>
-                  <p className="tituloDato">Nombre de usuario</p>
-                  <p className="datoApi">{item.name}</p>
+                  <StyledP titlP>Nombre de usuario</StyledP>
+                  <StyledP normalP>{item.name}</StyledP>
                 </div>
-              </div>{' '}
-            </div>
-            <div className="nombres">
-              <img src="https://www.svgrepo.com/show/17588/mail.svg"></img>
-              <div>
-                <p className="tituloDato">Email</p>
-                <p className="datoApi">{item.email}</p>
               </div>
-            </div>
-            <div className="nombres">
-              <img src="https://www.svgrepo.com/show/27964/phone.svg"></img>
+            </StylesDiv>
+            <StylesDiv namesDiv>
+            <StyledImg btnImg src="https://www.svgrepo.com/show/17588/mail.svg"></StyledImg>
               <div>
-                <p className="tituloDato">Movil</p>
-                <p className="datoApi">{item.movil}</p>
+                <StyledP titlP>Email</StyledP>
+                <StyledP normalP>{item.email}</StyledP>
               </div>
-            </div>
-            <div className="fecha">
-              <img src="https://www.svgrepo.com/show/378116/date.svg"></img>
+            </StylesDiv>
+            <StylesDiv namesDiv>
+            <StyledImg btnImg src="https://www.svgrepo.com/show/27964/phone.svg"></StyledImg>
               <div>
-                <p className="tituloDato">Fecha de inscripción</p>
-                <p className="datoApi">{item.date}</p>
+                <StyledP titlP>Movil</StyledP>
+                <StyledP normalP>{item.movil}</StyledP>
               </div>
-            </div>
-          </div>
+            </StylesDiv>
+            <StylesDiv fechaDiv>
+            <StyledImg btnImg src="https://www.svgrepo.com/show/378116/date.svg"></StyledImg>
+              <div>
+                <StyledP titlP>Fecha de inscripción</StyledP>
+                <StyledP normalP>{item.date}</StyledP>
+              </div>
+            </StylesDiv>
+          </StylesDiv>
         </StylesDiv>
       </>
     );
@@ -99,9 +101,9 @@ const DatosPop = ({ item }) => {
   if (variant == 'edit') {
     return (
       <>
-        <StylesForm inicForm onSubmit={(ev) => createAlumn(ev)}>
+        <StylesForm editForm onSubmit={(ev) => createAlumn(ev)}>
           <StylesDiv headerPopDiv>
-          <StylesDiv cursoHeadPopDiv>
+            <StylesDiv cursoHeadPopDiv>
               <StyledButton popNavBtnS>Perfil</StyledButton>
               <StyledButton popNavBtnN onClick={(ev) => setVariant('curso')}>
                 Cursos
@@ -110,7 +112,7 @@ const DatosPop = ({ item }) => {
             <StylesDiv cursoHeadPopDiv>
               <StyledButton closeBtn onClick={(ev) => setVariant('datos')}>
                 Cancelar edición
-              </StyledButton>         
+              </StyledButton>
               <StyledButton blackBtn type="submit">
                 Guardar
               </StyledButton>
@@ -142,7 +144,7 @@ const DatosPop = ({ item }) => {
             <StylesDiv campoDiv>
               <label htmlFor="name">NickName: </label>
               <StylesInput
-                  formInp
+                formInp
                 type="text"
                 name="name"
                 id="name"
@@ -152,7 +154,7 @@ const DatosPop = ({ item }) => {
             <StylesDiv campoDiv>
               <label htmlFor="email">Email:</label>
               <StylesInput
-                  formInp
+                formInp
                 type="text"
                 name="email"
                 id="email"
@@ -162,7 +164,7 @@ const DatosPop = ({ item }) => {
             <StylesDiv campoDiv>
               <label htmlFor="movil">Movil:</label>
               <StylesInput
-                  formInp
+                formInp
                 type="number"
                 name="movil"
                 id="movil"
