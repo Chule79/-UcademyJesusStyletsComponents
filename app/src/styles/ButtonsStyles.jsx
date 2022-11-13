@@ -24,7 +24,6 @@ export const StyledButton = styled.button`
     if (blackBtn) {
       return css`
         background-color: #262d34;
-        border-radius: 8px;
         width: 151px;
         height: 32px;
         color: #ffffff;

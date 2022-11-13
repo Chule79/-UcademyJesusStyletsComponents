@@ -6,6 +6,7 @@ import Popup from 'reactjs-popup';
 import DatosPop from '../BodyPop/DatosPop';
 import { StyledButton } from '../../../styles/ButtonsStyles';
 import { StyledImg } from '../../../styles/ImgStylez';
+import { StylesDiv } from '../../../styles/DivStyles';
 
 export const PopCreate = ({ item }) => {
   return (
@@ -18,16 +19,16 @@ export const PopCreate = ({ item }) => {
       modal
     >
       {(close) => (
-        <div className="modal">
-          <div className="ticket">
+        <StylesDiv opacityDiv>
+          <StylesDiv popRDiv>
             <DatosPop item={item} />
-            <div className="divClose">
+            <StylesDiv closePopDiv>
               <StyledButton closeBtn onClick={close}>
                 Cerar
               </StyledButton>
-            </div>
-          </div>
-        </div>
+            </StylesDiv>
+          </StylesDiv>
+        </StylesDiv>
       )}
     </Popup>
   );

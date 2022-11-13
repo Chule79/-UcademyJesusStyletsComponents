@@ -31,6 +31,7 @@ export const StyledA = styled.a`
     if (navA) {
       return css`
         text-decoration: none;
+        color: #dbdbdb;
       `;
     }
   }}
@@ -57,6 +58,14 @@ ${({ navASubS }) => {
       return css`
         text-decoration: none;
         color: red;
+      `;
+    }
+  }}
+
+${({ olviA }) => {
+    if (olviA) {
+      return css`
+        color: #9e9e9e;
       `;
     }
   }}

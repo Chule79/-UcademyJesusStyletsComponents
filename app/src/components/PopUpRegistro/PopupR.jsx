@@ -1,11 +1,11 @@
-import './PopupR.css';
-
 import axios from 'axios';
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import { v4 as uuidv4 } from 'uuid';
 
 import { StyledButton } from '../../styles/ButtonsStyles';
+import { StylesDiv } from '../../styles/DivStyles';
+import { StylesForm, StylesInput, StylesSelect } from '../../styles/FormStyles';
 import { StyledImg } from '../../styles/ImgStylez';
 export const PopRegister = () => {
   const [name, setName] = useState('');
@@ -53,75 +53,74 @@ export const PopRegister = () => {
       modal
     >
       {(close) => (
-        <div className="modal">
-          <div className="ticketRe">
-            <form onSubmit={(ev) => createAlumn(ev)} className="formRegister">
-              <div className="campoUnico">
+        <StylesDiv opacityDiv>
+          <StylesDiv popRDiv>
+            <StylesForm inicForm onSubmit={(ev) => createAlumn(ev)}>
+              <StylesDiv campoDiv>
                 <label htmlFor="username">Nombre y apellidos:</label>
-                <input
-                  className="cajaIn"
+                <StylesInput
+                  formInp
                   type="text"
                   name="username"
                   id="username"
                   onChange={(ev) => setSurname(ev.target.value)}
                 />
-              </div>
-              <div className="campoUnico">
+              </StylesDiv>
+              <StylesDiv campoDiv>
                 <label htmlFor="name">NickName: </label>
-                <input
-                  className="cajaIn"
+                <StylesInput
+                  formInp
                   type="text"
                   name="name"
                   id="name"
                   onChange={(ev) => setName(ev.target.value)}
                 />
-              </div>
-              <div className="campoUnico">
+              </StylesDiv>
+              <StylesDiv campoDiv>
                 <label htmlFor="email">Email:</label>
-                <input
-                  className="cajaIn"
+                <StylesInput
+                  formInp
                   type="text"
                   name="email"
                   id="email"
                   onChange={(ev) => setEmail(ev.target.value)}
                 />
-              </div>
-              <div className="campoDoble">
-                <div className="campoUnico">
+              </StylesDiv>
+              <StylesDiv campoDobleDiv>
+                <StylesDiv campoDiv>
                   <label htmlFor="state">Estado:</label>
-                  <select
-                    className="cajaIn"
+                  <StylesSelect
+                    stateSelect
                     name="type"
                     id="type"
                     onChange={(ev) => setState(ev.target.value)}
                   >
                     <option value="Offline">Offline</option>
                     <option value="Online">Online</option>
-                  </select>
-                </div>
-                <div className="campoUnico">
+                  </StylesSelect>
+                </StylesDiv>
+                <StylesDiv campoDiv>
                   <label htmlFor="movil">Movil:</label>
-                  <input
-                    className="cajaIn"
+                  <StylesInput
+                    movilInp
                     type="number"
                     name="movil"
                     id="movil"
                     onChange={(ev) => setMovil(ev.target.value)}
                   />
-                </div>
-              </div>
+                </StylesDiv>
+              </StylesDiv>
               <StyledButton blackBtn type="submit">
-                {' '}
                 Guardar
               </StyledButton>
-            </form>
-            <div className="divClose">
+            </StylesForm>
+            <StylesDiv closePopDiv>
               <StyledButton closeBtn onClick={close}>
                 Cerar
               </StyledButton>
-            </div>
-          </div>
-        </div>
+            </StylesDiv>
+          </StylesDiv>
+        </StylesDiv>
       )}
     </Popup>
   );

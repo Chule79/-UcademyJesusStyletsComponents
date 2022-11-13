@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 import { StyledButton } from '../../../styles/ButtonsStyles';
+import { StylesDiv } from '../../../styles/DivStyles';
+import { StylesForm, StylesInput } from '../../../styles/FormStyles';
 import CursoPop from './CursoPop';
 
 const DatosPop = ({ item }) => {
@@ -36,24 +38,24 @@ const DatosPop = ({ item }) => {
   if (variant == 'datos') {
     return (
       <>
-        <div className="opcionesBtn">
-          <div className="perfilCurso">
+        <StylesDiv headerPopDiv>
+        <StylesDiv cursoHeadPopDiv>
             <StyledButton popNavBtnS>Perfil</StyledButton>
             <StyledButton popNavBtnN onClick={(ev) => setVariant('curso')}>
               Cursos
             </StyledButton>
-          </div>
+          </StylesDiv>
           <StyledButton blackBtn onClick={(ev) => setVariant('edit')}>
             Editar estudiante
           </StyledButton>
-        </div>
-        <div className="dataUser">
-          <div className="mountainDiv">
+        </StylesDiv>
+        <StylesDiv cuerpoPopDiv>
+          <StylesDiv circleImgDiv>
             <img
               src="https://www.svgrepo.com/show/71408/image.svg"
               className="mountainImg"
             ></img>
-          </div>
+          </StylesDiv>
           <div className="todoDatos">
             <div className="nombres">
               <img src="https://www.svgrepo.com/show/20/user.svg"></img>
@@ -90,100 +92,102 @@ const DatosPop = ({ item }) => {
               </div>
             </div>
           </div>
-        </div>
+        </StylesDiv>
       </>
     );
   }
   if (variant == 'edit') {
     return (
       <>
-        <form onSubmit={(ev) => createAlumn(ev)} className="formEdit">
-          <div className="opcionesBtn">
-            <div className="perfilCurso">
+        <StylesForm inicForm onSubmit={(ev) => createAlumn(ev)}>
+          <StylesDiv headerPopDiv>
+          <StylesDiv cursoHeadPopDiv>
               <StyledButton popNavBtnS>Perfil</StyledButton>
               <StyledButton popNavBtnN onClick={(ev) => setVariant('curso')}>
                 Cursos
               </StyledButton>
-            </div>
-            <div className="cancelBtn">
+            </StylesDiv>
+            <StylesDiv cursoHeadPopDiv>
               <StyledButton closeBtn onClick={(ev) => setVariant('datos')}>
                 Cancelar edición
+              </StyledButton>         
+              <StyledButton blackBtn type="submit">
+                Guardar
               </StyledButton>
-              <input type="submit" value="Guardar" className="saveBtn" />
-            </div>
-          </div>
-          <div className="cuerpoForm">
-            <div className="campoDoble">
-              <div className="campoUnico">
+            </StylesDiv>
+          </StylesDiv>
+          <StylesDiv cuerpoFormDiv>
+            <StylesDiv campoDobleDiv>
+              <StylesDiv campoSurnameDiv>
                 <label htmlFor="username">Nombre:</label>
-                <input
-                  className="cajaIn"
+                <StylesInput
+                  movilInp
                   type="text"
                   name="username"
                   id="username"
                   onChange={(ev) => setSurname(ev.target.value)}
                 />
-              </div>
-              <div className="campoUnico">
+              </StylesDiv>
+              <StylesDiv campoSurnameDiv>
                 <label htmlFor="username">Apellidos:</label>
-                <input
-                  className="cajaIn"
+                <StylesInput
+                  movilInp
                   type="text"
                   name="username"
                   id="username"
                   onChange={(ev) => setSurname2(ev.target.value)}
                 />
-              </div>
-            </div>
-            <div className="campoUnico">
+              </StylesDiv>
+            </StylesDiv>
+            <StylesDiv campoDiv>
               <label htmlFor="name">NickName: </label>
-              <input
-                className="cajaIn"
+              <StylesInput
+                  formInp
                 type="text"
                 name="name"
                 id="name"
                 onChange={(ev) => setName(ev.target.value)}
               />
-            </div>
-            <div className="campoUnico">
+            </StylesDiv>
+            <StylesDiv campoDiv>
               <label htmlFor="email">Email:</label>
-              <input
-                className="cajaIn"
+              <StylesInput
+                  formInp
                 type="text"
                 name="email"
                 id="email"
                 onChange={(ev) => setEmail(ev.target.value)}
               />
-            </div>
-            <div className="campoUnico">
+            </StylesDiv>
+            <StylesDiv campoDiv>
               <label htmlFor="movil">Movil:</label>
-              <input
-                className="cajaIn"
+              <StylesInput
+                  formInp
                 type="number"
                 name="movil"
                 id="movil"
                 onChange={(ev) => setMovil(ev.target.value)}
               />
-            </div>
-          </div>
-        </form>
+            </StylesDiv>
+          </StylesDiv>
+        </StylesForm>
       </>
     );
   }
   if (variant == 'curso') {
     return (
       <>
-        <div className="opcionesBtn">
-          <div className="perfilCurso">
+        <StylesDiv headerPopDiv>
+          <StylesDiv cursoHeadPopDiv>
             <StyledButton popNavBtnN onClick={(ev) => setVariant('datos')}>
               Perfil
             </StyledButton>
             <StyledButton popNavBtnS>Cursos</StyledButton>
-          </div>
-        </div>
-        <div className="dataUser">
+          </StylesDiv>
+        </StylesDiv>
+        <StylesDiv cuerpoPopDiv>
           <CursoPop />
-        </div>
+        </StylesDiv>
       </>
     );
   }

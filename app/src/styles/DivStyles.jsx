@@ -94,4 +94,176 @@ ${({ tablonDiv }) => {
       `;
     }
   }}
+
+${({ inicDiv }) => {
+    if (inicDiv) {
+      return css`
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        align-self: center;
+        font-family: Montserrat;
+      `;
+    }
+  }}
+
+  
+${({ campoDiv }) => {
+    if (campoDiv) {
+      return css`
+        line-height: 22px;
+        font-weight: 500;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 0.5rem;
+      `;
+    }
+  }}
+
+${({ incOptiDiv }) => {
+    if (incOptiDiv) {
+      return css`
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 400px;
+      `;
+    }
+  }}
+  ${({ rememDiv }) => {
+    if (rememDiv) {
+      return css`
+        display: flex;
+        gap: 1rem;
+      `;
+    }
+  }}
+
+  ${({ opacityDiv }) => {
+    if (opacityDiv) {
+      return css`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+      `;
+    }
+  }}
+
+${({ popRDiv }) => {
+    if (popRDiv) {
+      return css`
+        background-color: #ffffff;
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid black;
+        border-radius: 8px;
+        height: 611px;
+      `;
+    }
+  }}
+
+${({ campoDobleDiv }) => {
+    if (campoDobleDiv) {
+      return css`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        gap: 2rem;
+      `;
+    }
+  }}
+
+${({ headerPopDiv }) => {
+    if (headerPopDiv) {
+      return css`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      `;
+    }
+  }}
+  ${({ closePopDiv }) => {
+    if (closePopDiv) {
+      return css`
+        display: flex;
+        justify-content: end;
+        width: 90%;
+      `;
+    }
+  }}
+
+${({ cursoHeadPopDiv }) => {
+    if (cursoHeadPopDiv) {
+      return css`
+        display: flex;
+        gap: 1rem;
+      `;
+    }
+  }}
+
+${({ cuerpoPopDiv }) => {
+    if (cuerpoPopDiv) {
+      return css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        overflow: scroll;
+      `;
+    }
+  }}
+
+${({ cuerpoFormDiv }) => {
+    if (cuerpoFormDiv) {
+      return css`
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-self: center;
+        justify-self: center;
+        font-family: Montserrat;
+        font-size: 11px;
+      `;
+    }
+  }}
+  ${({ campoSurnameDiv }) => {
+    if (campoSurnameDiv) {
+      return css`
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 50%;
+      `;
+    }
+  }}
+
+${({ circleImgDiv }) => {
+    if (circleImgDiv) {
+      return css`
+        border: 0.5px solid black;
+        border-radius: 80%;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      `;
+    }
+  }}
 `;
